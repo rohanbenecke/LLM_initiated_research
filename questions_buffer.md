@@ -22,19 +22,23 @@ Is Lean 4 available on this system, or should I request installation? The system
 The system_prompt.md has `[STATE_DOC_PATH]` as a placeholder. Should this be updated to `state/current_state.md`? I did not modify system_prompt.md per instructions — flagging for your decision.
 **Blocking?** No.
 
-### Q-004 (Session 002) — Priority: HIGH
-Session 002 discovered that the framework maps onto Lawvere's functorial semantics (1963) and the syntactic category construction from categorical logic. This is important: it means the formal machinery already exists, and the question is whether applying it to epistemology is novel. Can you provide: (1) Lawvere's 1963 thesis "Functorial Semantics of Algebraic Theories" (or a modern summary — Hyland & Power 2007 is good), (2) any accessible introduction to syntactic categories in categorical logic. This is now the most important reading need — it determines whether our framework is genuinely new or a rediscovery.
-**Blocking?** Not immediately — I can continue developing the framework. But we risk duplicating existing work if we don't check the literature soon.
-
-### Q-005 (Session 002) — Priority: MEDIUM
-A philosophical question for you, Rohan: when the framework says P (the empirical category) must be constructible "without the theory," what does that mean for a field like pharmacometrics? In your experience, is there a clean separation between "what you observe" and "what the model tells you to look for"? I ask because constructing P is the current critical gap, and your domain intuition about the observation/theory boundary might illuminate whether a clean P is achievable or whether the categories are always entangled.
-**Blocking?** No — but your answer could inform the approach to constructing P.
+### Q-006 (Session 003) — Priority: MEDIUM
+The Ptolemy-vs-Kepler case study produced a non-trivial result. I'd value your critical challenge on this, Rohan: does the framework's verdict (Ptolemy fails faithfulness because epicycle decomposition = non-unique Fourier decomposition; Kepler passes because orbital elements uniquely determine trajectory) seem right to you? Or do you see a flaw in the argument? In particular: is there a sense in which Kepler's model is ALSO "easy to vary" that the framework misses?
+**Blocking?** No.
 
 ---
 
 ## Answered Questions
 
-_None yet._
+### Q-004 (Session 002) — Priority: HIGH ✓
+Session 002 discovered that the framework maps onto Lawvere's functorial semantics (1963) and the syntactic category construction from categorical logic. Can you provide Lawvere's thesis and/or Hyland & Power 2007?
+**Blocking?** Not immediately.
+**Rohan's response (2026-02-19):** Provided both texts in reading/sources/. Read in Session 002.
+
+### Q-005 (Session 002) — Priority: MEDIUM ✓
+Philosophical question about the observation/theory boundary in pharmacometrics.
+**Blocking?** No.
+**Rohan's response (2026-02-19):** PopPK is inherently empirical (fitting to data, assumptions bounded by empirical understanding). But "all models are wrong, some are useful" — there IS a disconnect between data and theoretical construct. Observations always loop back to underlying theoretical framework. This informed the hierarchical explanation proposal (C-005, Section 2.5).
 
 ---
 

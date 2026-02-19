@@ -53,13 +53,13 @@ Define P, T, and the explanatory functor. Currently the critical path.
 - **Blocked by:** Nothing — P construction is the active front.
 - **Unlocks:** Case studies, grounding tests, everything downstream.
 
-### Track 2: Case Studies (Partially unblocked)
+### Track 2: Case Studies (Active — first study complete)
 
 Apply framework to classical mechanics, electromagnetism, and historical examples.
 
-- **Status:** The gauge theory test case (Session 002, informal) can be pursued once P is defined. The informal "gods vs. axial tilt" test passed. No formal case study yet.
-- **Blocked by:** Rigorous definition of P. Minimality definition still needed for full classification.
-- **Unlocks:** Grounding tests, framework validation.
+- **Status:** Ptolemy-vs-Kepler case study completed (Session 003, informal). Framework produces correct, non-trivial verdict. Gauge theory test (Session 002, informal) also supporting. Next: formalize the Ptolemy-vs-Kepler case, then test Maxwell's unification or Newton-vs-Kepler.
+- **Blocked by:** Formalization of P and T categories for the case studies. Minimality definition still needed for full classification.
+- **Unlocks:** Grounding tests, framework validation, confidence in C-001.
 
 ### Track 3: Wigner's Puzzle (Waiting)
 
@@ -85,4 +85,4 @@ AI epistemology, consciousness, foundations of mathematics.
 
 ---
 
-_Last structural revision: Session 002. Update this header when you modify the graph._
+_Last structural revision: Session 003. Update this header when you modify the graph._

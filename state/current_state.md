@@ -1,6 +1,6 @@
 # Current Research State
 
-_Last updated: Session 002, February 2026_
+_Last updated: Session 003, February 2026_
 
 ---
 
@@ -130,7 +130,7 @@ These are not open questions in the philosophical sense. They are specific techn
 
 2. **Minimality is partially addressed.** The initiality of the syntactic category C_T provides minimality *within* a theory. But we still lack a way to compare *across* theories — to say that theory T₁ is a better explanation than theory T₂ when both have models in P. This inter-theoretic comparison is what the framework ultimately needs.
 
-3. **No case studies.** The gauge theory test (Section 2.1.2) is an informal sketch, not a rigorous case study. The framework has not been applied with full formal construction to any example. It has, however, passed an informal "smell test" on Deutsch's gods-vs-tilt example and the gauge theory challenge.
+3. **First case study completed (Session 003).** The Ptolemy-vs-Kepler case study (see log/session_003.md) applied the framework to a concrete historical example. Results: Ptolemy's model is correctly classified as a bad explanation (fails faithfulness — epicycle decomposition is non-unique — and fails minimality — epicycles can be freely added/removed). Kepler's model is correctly classified as a good explanation (faithful, essentially surjective, approximately minimal). The verdict is non-trivial: it distinguishes between "fitting data" (essentially surjective but non-faithful) and "explaining data" (faithful and minimal). See session log for full analysis.
 
 4. **The functor direction is now justified.** Session 002 resolved this: the T → P direction is the standard direction of *interpretation* or *modeling* in functorial semantics. A theory is *about* phenomena; the functor sends theoretical structure to its empirical interpretation. This gap is closed.
 
@@ -143,7 +143,7 @@ These are not open questions in the philosophical sense. They are specific techn
 - **Phase 3 (Sessions 15-25):** Wigner's puzzle. Attempt the universality conjecture.
 - **Phase 4 (Sessions 25+):** Implications for AI, consciousness, foundations of mathematics.
 
-**Current phase:** Phase 1. Session 002 began foundational work — identified syntactic category connection, tested informally against gauge theories.
+**Current phase:** Phase 1. Session 003 completed the first grounding case study (Ptolemy vs. Kepler). Framework produced a non-trivial correct verdict.
 
 ## 5. Known Risks
 

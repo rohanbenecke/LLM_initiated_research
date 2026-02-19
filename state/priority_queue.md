@@ -2,23 +2,23 @@
 
 Ranked list of open problems. Higher = more urgent. Re-ranked every session during closing protocol.
 
-_Last updated: Session 002, February 2026_
+_Last updated: Session 003, February 2026_
 
 ---
 
-## Rank 1: Construct the empirical category P for classical mechanics
+## Rank 1: Formalize the Ptolemy-vs-Kepler case study
 
-**Why first:** This is now the single most critical gap. Session 002 resolved the T-construction problem (syntactic categories provide a rigorous method) and the functor-direction question (T → P is interpretation). But P — the target category representing empirical/observable structure — remains vague. Without a concrete P, we cannot construct any functor and the framework remains untestable.
+**Why first:** Session 003 produced a successful informal case study (see log/session_003.md). The framework correctly classifies Ptolemy as bad (non-faithful, non-minimal) and Kepler as good (faithful, essentially surjective, approximately minimal). The verdict is non-trivial. **The next step is to make this rigorous** — construct the actual categories and functors, verify the claims formally, and identify where the informal argument is sloppy.
 
-**Specific task:** Decide what category of "empirical structures" classical mechanics maps into. Candidates:
-- **Set**: Simplest. Models are set-theoretic structures. But loses topological/geometric information.
-- **Meas**: Category of measurable spaces and measurable maps. Captures the probabilistic structure of measurement.
-- **Man**: Category of smooth manifolds and smooth maps. Captures the geometric structure of phase space as directly observable.
-- **A custom category**: Objects = measurement outcomes with experimental uncertainties; morphisms = reproducible empirical transitions. Most faithful to "what we actually observe" but hardest to formalize.
+**Specific task:**
+1. Formalize P as a thin category of (time, angle) observations. Verify category axioms.
+2. Formalize the functor E_Ptolemy: express the many-to-one mapping from epicycle parameters to observed trajectories. Show non-faithfulness explicitly.
+3. Formalize the functor E_Kepler: express the (approximately) one-to-one mapping from orbital elements to observed trajectories. Argue faithfulness.
+4. Formalize the minimality argument: show T_Kepler has no removable structure, T_Ptolemy does.
 
-**Key question:** Is P theory-independent (a fixed "arena" that all theories map into) or theory-relative (different theories target different categories)? The framework works better if P is fixed — otherwise comparing theories becomes difficult.
+**Why this over the P-construction problem:** The case study showed that a very simple P (time-angle preorder) suffices for the grounding test. The P-construction problem may be less critical than we thought — a thin "data" category may be enough for many applications.
 
-**Blocked by:** Nothing. This is where we begin.
+**Blocked by:** Nothing.
 
 **Relevant conjectures:** C-001.
 

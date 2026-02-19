@@ -114,7 +114,7 @@ The source category T in a good explanation is **minimal** if it contains no unn
 (c) **Initiality:** T is an initial object in some category of explanations — i.e., the simplest explanation that works, in a precise universal sense. (Most elegant if it works. Requires defining a "category of explanations," which is meta-level machinery.)
 
 **Open issues:**
-- None of these have been tested against examples.
+- **Session 003 update:** Minimality was tested informally in the Ptolemy-vs-Kepler case study. Ptolemy fails minimality (epicycles can be added/removed freely). Kepler passes (each law is necessary). The relevant notion of minimality here is closest to candidate (b) — quotient minimality — because the question was "can we remove structure and still have a faithful, essentially surjective functor?"
 - Candidates (a) and (b) may not be equivalent. Determining their relationship is an open question.
 - Candidate (c) requires defining what morphisms between explanations are, which is itself non-trivial.
 
