@@ -1,6 +1,6 @@
 # Current Research State
 
-_Last updated: Session 001, February 2026_
+_Last updated: Session 002, February 2026_
 
 ---
 
@@ -34,6 +34,43 @@ A *good explanation* is a functor that is:
 
 **Status:** This is the core thesis. None of these conditions have been rigorously tested against real scientific theories. The direction of the functor (T → P, mapping theory onto phenomena) is a choice that needs examination — the reverse direction (P → T) or an adjoint pair might be more appropriate.
 
+### 2.1.1 The Syntactic Category Connection [CONJECTURED — Session 002]
+
+Session 002 discovered that the "explanation as functor" framework maps directly onto an established construction in categorical logic: **Lawvere's functorial semantics** and the **syntactic category**.
+
+Given a first-order theory T (axioms in formal logic), its *syntactic category* C_T is constructed as:
+
+- **Objects:** Equivalence classes of formulas-in-context {x : phi(x)} under provable equivalence in T.
+- **Morphisms {x : phi(x)} → {y : psi(y)}:** Equivalence classes of provably functional relations — formulas theta(x,y) such that T proves: for all x, if phi(x) then there exists a unique y such that psi(y) and theta(x,y).
+- **Composition:** Relational composition.
+- **Identity:** The equality relation.
+
+A **model** of T in a category C (with appropriate structure) is a structure-preserving functor M: C_T → C.
+
+**Key theorem from categorical logic:** C_T is the **initial** object in the category of models of T. That is, for any model M of T in any appropriate category C, there exists a unique (up to iso) structure-preserving functor C_T → C. This is a precise form of minimality — the syntactic category is the "leanest possible" categorical representation of the theory.
+
+**What this means for us:** If we take P to be a category of empirical/observable structures, then a model of theory T in P is a functor C_T → P. This is exactly the explanatory functor E. The framework we're building is not new machinery — it's a re-discovery of functorial semantics applied to the epistemology of explanation.
+
+**What this resolves:**
+- The construction of T is no longer ad hoc. Given a theory stated as first-order axioms, C_T is determined.
+- Minimality has a precise meaning: initiality of C_T in the category of models.
+- The functor direction (T → P) is justified: it's the direction of interpretation/modeling. A theory is *about* phenomena; the functor sends theoretical structure to its empirical interpretation.
+
+**What this does NOT resolve:**
+- P is still vague. What category of "empirical structures" is the target? For classical mechanics, is it Set? Meas (measurable spaces)? Smooth manifolds?
+- Real scientific theories are not always neatly axiomatized in first-order logic. How does this framework handle theories with higher-order or informal content?
+- Initiality gives minimality *within* a given theory, but we need to compare *across* theories to determine which explanation is "better." The category of models of T₁ and the category of models of T₂ are different categories.
+
+### 2.1.2 The Gauge Theory Test [CONJECTURED — Session 002]
+
+Session 002 identified a potential challenge: gauge theories (electromagnetism, Yang-Mills, general relativity) are among our best physical explanations, but they contain theoretical structure — gauge degrees of freedom — with no empirical counterpart. Gauge transformations are theoretical morphisms that map to identity morphisms in P. This means the model functor C_T → P is **not faithful** for the raw gauge theory.
+
+**Proposed resolution:** This is actually consistent with the framework. The minimality condition says: remove unnecessary structure from T. Gauge degrees of freedom are unnecessary structure (they are precisely the redundancy in the description). The *minimal* source category for a gauge theory is the category of **gauge-invariant** quantities — the quotient of C_T by the gauge equivalence relation. The functor from this quotient to P *is* faithful.
+
+**Why this matters:** The gauge theory case shows that the minimality condition is not vacuous — it does real work. It identifies gauge redundancy as "the part of the theory that should be removed," which matches physics. This is a non-trivial correct classification.
+
+**Status:** CONJECTURED. The argument is informal. Making it rigorous requires (a) constructing C_T for a specific gauge theory, (b) constructing the gauge quotient, and (c) verifying faithfulness of the resulting functor. This has not been done.
+
 ### 2.2 Hard-to-Vary as Rigidity [CONJECTURED — C-004]
 
 The "hardness of variation" becomes a precise topological property: how rigid is the functor E? If T is minimal and E is faithful, then any variation in T changes the image in P — which is Deutsch's criterion stated formally.
@@ -56,13 +93,15 @@ The "minimality" condition on T might correspond to Kolmogorov complexity of the
 
 These are not open questions in the philosophical sense. They are specific technical prerequisites that must be addressed before the framework can be evaluated.
 
-1. **P and T are not constructed.** We have informal descriptions ("objects are observable phenomena") but no rigorous category for any specific physical theory. Without this, every claim about the framework is untestable. This is the first priority.
+1. **T construction is partially resolved; P is not.** Session 002 identified that the syntactic category construction from categorical logic provides a rigorous, non-ad-hoc way to build T from any first-order theory. **But P remains vague.** What category of "empirical structures" serves as the target? Candidates include Set, Meas (measurable spaces), Top (topological spaces), or Man (smooth manifolds). The choice of P determines what "observable" means and affects what functors E: C_T → P can exist. **This is now the most critical gap.**
 
-2. **"Minimal" is not defined.** This is a project-specific term with no standard meaning in category theory. Three candidate formalizations exist (see glossary) but none have been evaluated.
+2. **Minimality is partially addressed.** The initiality of the syntactic category C_T provides minimality *within* a theory. But we still lack a way to compare *across* theories — to say that theory T₁ is a better explanation than theory T₂ when both have models in P. This inter-theoretic comparison is what the framework ultimately needs.
 
-3. **No case studies.** The framework has not been applied to a single concrete example. Until it classifies at least one known-good and one known-bad explanation correctly, it is pure speculation.
+3. **No case studies.** The gauge theory test (Section 2.1.2) is an informal sketch, not a rigorous case study. The framework has not been applied with full formal construction to any example. It has, however, passed an informal "smell test" on Deutsch's gods-vs-tilt example and the gauge theory challenge.
 
-4. **The functor direction is assumed, not argued.** Why T → P rather than P → T? The scoping document chooses T → P but does not justify it.
+4. **The functor direction is now justified.** Session 002 resolved this: the T → P direction is the standard direction of *interpretation* or *modeling* in functorial semantics. A theory is *about* phenomena; the functor sends theoretical structure to its empirical interpretation. This gap is closed.
+
+5. **Cross-theory comparison is undefined.** (New, Session 002.) Given two theories T₁ and T₂ that both model the same phenomena P, how do we compare their explanatory goodness? The framework says "more faithful and more minimal wins," but we need a precise ordering. This may require defining a category whose objects are explanations (functors C_T → P for various T) and whose morphisms are... what?
 
 ## 4. Phasing (from Scoping Document)
 
@@ -71,7 +110,7 @@ These are not open questions in the philosophical sense. They are specific techn
 - **Phase 3 (Sessions 15-25):** Wigner's puzzle. Attempt the universality conjecture.
 - **Phase 4 (Sessions 25+):** Implications for AI, consciousness, foundations of mathematics.
 
-**Current phase:** Phase 1. Session 001 is infrastructure setup.
+**Current phase:** Phase 1. Session 002 began foundational work — identified syntactic category connection, tested informally against gauge theories.
 
 ## 5. Known Risks
 

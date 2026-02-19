@@ -46,9 +46,13 @@ Update this whenever you introduce a new term or discover that you're using an e
 
 **Project-specific term.** The target category in an explanatory functor. Objects are observable phenomena; morphisms are empirical relationships. **Not yet rigorously constructed for any specific theory.** This is a priority item.
 
+### Syntactic Category (C_T)
+
+**Standard meaning:** Given a first-order theory T, the syntactic category C_T has formulas-in-context (up to provable equivalence) as objects and provably functional relations as morphisms. It is the initial model of T — any model of T in any category C factors uniquely through C_T. **Project usage:** Session 002 identified this as the right construction for the theoretical category. Given a scientific theory stated as first-order axioms, C_T provides a rigorous, uniquely determined categorical representation. The explanatory functor E: C_T → P is then a model of the theory in the empirical category. See Definition 1.2v2.
+
 ### T (category)
 
-**Project-specific term.** The source category in an explanatory functor. Objects are theoretical constructs; morphisms are logical or mathematical entailments. **Not yet rigorously constructed.** Same priority as P.
+**Project-specific term.** The source category in an explanatory functor. Originally described informally (Session 001). **Now identified with the syntactic category C_T** (Session 002). Given a theory T stated as first-order axioms, the source category is C_T as defined in Definition 1.2v2.
 
 ### Confidence Tiers
 
@@ -60,6 +64,14 @@ Update this whenever you introduce a new term or discover that you're using an e
 - SPECULATIVE: Worth exploring, no strong evidence
 
 ---
+
+### Functorial Semantics
+
+**Standard meaning:** Lawvere's approach to universal algebra and logic, in which a theory is identified with a category (the syntactic or Lawvere theory) and a model is a structure-preserving functor from that category to a target. **Project usage:** Session 002 recognized that our "explanation as functor" framework is an instance of functorial semantics. The explanatory functor E: C_T → P is a model of theory T in the empirical category P.
+
+### Model (of a theory, in a category)
+
+**Standard meaning:** A structure-preserving functor M: C_T → C from the syntactic category of theory T to a category C. When C = Set, this recovers ordinary set-theoretic models. **Project usage:** An explanation is a model of a theory in the empirical category P. A "good explanation" is a model that is faithful, essentially surjective, and minimal.
 
 ### Terms To Define (Parking Lot)
 
@@ -73,6 +85,7 @@ These terms will likely need glossary entries as the project develops:
 - Homotopy type / HoTT concepts
 - Computational irreducibility (if Wolfram's work becomes relevant)
 - Presentation (of a category)
+- Gauge equivalence / gauge quotient (relevant to gauge theory test case)
 
 ---
 

@@ -2,7 +2,7 @@
 
 All definitions used in this project, versioned and tagged with confidence tiers. Never silently overwrite — when revising, create a new version and note what changed and why.
 
-_Last updated: Session 001, February 2026_
+_Last updated: Session 002, February 2026_
 
 ---
 
@@ -24,7 +24,7 @@ A category **P** whose:
 
 ---
 
-## Definition 1.2v1: The Theoretical Category T
+## Definition 1.2v1: The Theoretical Category T [SUPERSEDED by 1.2v2]
 
 **Introduced:** Session 001 (from scoping document)
 **Confidence:** SPECULATIVE — described informally, not yet rigorously constructed
@@ -38,6 +38,31 @@ A category **T** whose:
 - Same imprecision as P. For classical mechanics, objects might be: elements of a Lie algebra, Hamiltonians, Lagrangians, etc.
 - The relationship between T and the mathematical formalism of a physical theory needs clarification. Is T the formalism itself, or a category derived from it?
 
+**Superseded by 1.2v2** — Session 002 identified the syntactic category as the right construction.
+
+---
+
+## Definition 1.2v2: The Theoretical Category as Syntactic Category
+
+**Introduced:** Session 002
+**Confidence:** CONJECTURED — construction is standard in categorical logic; its application to explanatory goodness is the conjecture
+
+Given a first-order theory T (a set of axioms in a formal language), the **syntactic category** C_T is:
+
+- **Objects:** Equivalence classes of formulas-in-context {x : phi(x)} under provable equivalence in T. Two formulas phi(x) and psi(x) are equivalent if T proves: for all x, phi(x) if and only if psi(x).
+- **Morphisms {x : phi(x)} → {y : psi(y)}:** Equivalence classes of provably functional relations. A morphism is (represented by) a formula theta(x,y) such that T proves: for all x, if phi(x) then there exists a unique y such that psi(y) and theta(x,y).
+- **Composition:** Given theta₁: {x:phi} → {y:psi} and theta₂: {y:psi} → {z:chi}, their composite is {(x,z) : exists y, theta₁(x,y) and theta₂(y,z)}: {x:phi} → {z:chi}.
+- **Identity:** The equality formula: id_{x:phi} is represented by "x = y and phi(x)."
+
+**Key property:** C_T is the **initial** object in the category of T-models in categories with appropriate structure. For any model M of T in a category C, there exists a unique (up to iso) structure-preserving functor C_T → C. Source: Lawvere's functorial semantics, Makkai & Reyes categorical logic.
+
+**What this means for the project:** T is no longer ad hoc. Given any scientific theory that can be stated as first-order axioms, C_T is uniquely determined. The explanatory functor E: C_T → P is then a model of the theory in the empirical category.
+
+**Open issues:**
+- Requires the scientific theory to be expressible in first-order logic. Some theories may require higher-order or type-theoretic formulations. The construction generalizes (e.g., to typed theories, essentially algebraic theories) but each generalization needs checking.
+- The syntactic category can be enormous (proper-class-sized if the language is). In practice, we work with small subcategories relevant to specific explanatory contexts.
+- The initiality property gives minimality of the syntactic presentation. But is this the right kind of minimality for explanatory goodness? A syntactic category with redundant axioms is still initial (the redundant axioms don't change the provability relation). So "minimal" might mean: minimal *axiomatization* of the theory, not just minimal category.
+
 ---
 
 ## Definition 1.3v1: Explanation (as Functor)
@@ -48,8 +73,8 @@ A category **T** whose:
 An **explanation** of phenomena in P by a theory T is a functor **E: T → P** that maps theoretical structure onto empirical structure while preserving relationships (composition and identities).
 
 **Open issues:**
-- Why T → P and not P → T? The direction encodes a claim: the theory maps onto the phenomena, not the other way around. This may be wrong.
-- An adjoint pair (a functor T → P left adjoint to a functor P → T) might better capture the bidirectional nature of explanation: theory predicts phenomena, and phenomena constrain theory.
+- ~~Why T → P and not P → T?~~ **Resolved, Session 002.** The T → P direction is the standard direction of interpretation in functorial semantics. A model of a theory T in a category P is a functor C_T → P. This is how mathematical logic has always worked: theories map *into* their models.
+- The adjoint pair idea is not dead but is now reframed: there may be an adjunction between the "free theory on observations" and the "model of theory in observations," but the primary explanatory functor is T → P.
 
 ---
 

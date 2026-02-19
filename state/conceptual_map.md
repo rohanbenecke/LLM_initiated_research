@@ -11,70 +11,78 @@ graph TD
     A[Central Thesis: Good explanation = minimal faithful functor] --> B[Define category P for empirical phenomena]
     A --> C[Define category T for theoretical structure]
     A --> D[Define 'minimal faithful functor' precisely]
-    A --> N[Resolve functor direction: T→P vs P→T vs adjunction]
 
-    N --> E
-    N --> F
+    C -->|DONE Session 002| C2[T = Syntactic category C_T from categorical logic]
+    C2 --> O[Define cross-theory comparison]
+    C2 --> P2[Gauge theory test case]
+
     B --> E[Case study: Classical mechanics]
-    B --> F[Case study: Electromagnetism]
-    
+    B --> F[Case study: Electromagnetism / gauge theory]
+
     D --> G[Relationship to Kolmogorov complexity]
     D --> H[Relationship to universal properties]
-    
+    D --> O
+
     E --> I[Grounding test: Does framework classify good vs bad explanations?]
     F --> I
     D --> I
-    
+    P2 --> I
+
     H --> J[Conjecture: Recurrent math structures = universal constructions]
     I --> K[Phase 3: Wigner's puzzle]
     J --> K
-    
+
     K --> L[Implications for AI epistemology]
     K --> M[Implications for consciousness]
 
     style A fill:#2d3436,color:#fff
+    style C2 fill:#00b894,color:#fff
     style I fill:#636e72,color:#fff
     style K fill:#636e72,color:#fff
 ```
 
+**Legend:** Green = resolved. Dark gray = milestone. Medium gray = distant.
+
 ## Track Status
 
-### Track 1: Foundations (Active)
+### Track 1: Foundations (Active — partially resolved)
 
 Define P, T, and the explanatory functor. Currently the critical path.
 
-- **Status:** Not started
-- **Blocked by:** Nothing — this is where we begin
-- **Unlocks:** Case studies, grounding tests, everything downstream
+- **Status:** T is resolved (syntactic category, Session 002). Functor direction resolved (T → P, Session 002). **P is the remaining critical gap.** Cross-theory comparison is a new open problem.
+- **Blocked by:** Nothing — P construction is the active front.
+- **Unlocks:** Case studies, grounding tests, everything downstream.
 
-### Track 2: Case Studies (Waiting)
+### Track 2: Case Studies (Partially unblocked)
 
 Apply framework to classical mechanics, electromagnetism, and historical examples.
 
-- **Status:** Waiting on Track 1
-- **Blocked by:** Rigorous definitions of P, T, and minimality
-- **Unlocks:** Grounding tests, framework validation
+- **Status:** The gauge theory test case (Session 002, informal) can be pursued once P is defined. The informal "gods vs. axial tilt" test passed. No formal case study yet.
+- **Blocked by:** Rigorous definition of P. Minimality definition still needed for full classification.
+- **Unlocks:** Grounding tests, framework validation.
 
 ### Track 3: Wigner's Puzzle (Waiting)
 
 Connect explanatory framework to universality in category theory.
 
-- **Status:** Waiting on Tracks 1 and 2
-- **Blocked by:** Validated framework + universal properties analysis
-- **Unlocks:** The central result
+- **Status:** Waiting on Tracks 1 and 2.
+- **Blocked by:** Validated framework + universal properties analysis.
+- **Unlocks:** The central result.
 
 ### Track 4: Implications (Waiting)
 
 AI epistemology, consciousness, foundations of mathematics.
 
-- **Status:** Distant — do not start until Track 3 has results
-- **Blocked by:** Everything else
+- **Status:** Distant — do not start until Track 3 has results.
+- **Blocked by:** Everything else.
 
 ## Notes on Dependencies
 
 - Tracks 1 and 2 have a soft dependency: you can start sketching case studies before definitions are final, as a way of testing whether the definitions are on the right track. But don't formalize case study results until definitions stabilize.
 - The relationship between minimality and Kolmogorov complexity (node G) may turn out to be a dead end. If so, an alternative notion of minimality needs to be found before Track 3 can proceed.
+- **New (Session 002):** The syntactic category connection means Track 1 is now partially about understanding existing literature (Lawvere, Makkai-Reyes) rather than inventing new machinery. This is good — we should know what already exists before claiming novelty.
+- **New (Session 002):** Cross-theory comparison (node O) is a new dependency that was not in the original scoping document. It sits between Tracks 1 and 2 — we need it to compare explanations, which is what the grounding tests require.
 
 ---
 
-_Last structural revision: Session 001. Update this header when you modify the graph._
+_Last structural revision: Session 002. Update this header when you modify the graph._

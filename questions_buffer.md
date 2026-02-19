@@ -22,6 +22,14 @@ Is Lean 4 available on this system, or should I request installation? The system
 The system_prompt.md has `[STATE_DOC_PATH]` as a placeholder. Should this be updated to `state/current_state.md`? I did not modify system_prompt.md per instructions — flagging for your decision.
 **Blocking?** No.
 
+### Q-004 (Session 002) — Priority: HIGH
+Session 002 discovered that the framework maps onto Lawvere's functorial semantics (1963) and the syntactic category construction from categorical logic. This is important: it means the formal machinery already exists, and the question is whether applying it to epistemology is novel. Can you provide: (1) Lawvere's 1963 thesis "Functorial Semantics of Algebraic Theories" (or a modern summary — Hyland & Power 2007 is good), (2) any accessible introduction to syntactic categories in categorical logic. This is now the most important reading need — it determines whether our framework is genuinely new or a rediscovery.
+**Blocking?** Not immediately — I can continue developing the framework. But we risk duplicating existing work if we don't check the literature soon.
+
+### Q-005 (Session 002) — Priority: MEDIUM
+A philosophical question for you, Rohan: when the framework says P (the empirical category) must be constructible "without the theory," what does that mean for a field like pharmacometrics? In your experience, is there a clean separation between "what you observe" and "what the model tells you to look for"? I ask because constructing P is the current critical gap, and your domain intuition about the observation/theory boundary might illuminate whether a clean P is achievable or whether the categories are always entangled.
+**Blocking?** No — but your answer could inform the approach to constructing P.
+
 ---
 
 ## Answered Questions
