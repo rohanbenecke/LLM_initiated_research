@@ -89,11 +89,44 @@ The "minimality" condition on T might correspond to Kolmogorov complexity of the
 
 **Status:** Independent of C-002. Can be investigated in parallel with C-001. May be a dead end — the scoping document notes that compression is necessary but not sufficient for explanation.
 
+### 2.5 The Hierarchical Picture of Explanation [SPECULATIVE — Session 002]
+
+Session 002 (after reading Lawvere and consulting Rohan's pharmacometrics intuition) produced a refinement of the framework: **P does not need to be theory-free. P can be the category of models of a simpler theory.**
+
+**The problem:** The scoping document assumes P is a category of "raw" empirical observations. But observations are theory-laden (Rohan's insight from pharmacometrics: even "drug concentration" requires a theoretical framework about assays and chemistry). A truly theory-free P would be so structureless as to be useless.
+
+**The proposal:** Instead of a single functor T → P, explanation is a **hierarchy of functors between theories of decreasing depth:**
+
+```
+T₃ (deep theory: e.g., Hamiltonian mechanics)
+ ↓ functor E₃
+T₂ (phenomenological theory: e.g., empirical regularities like Kepler's laws)
+ ↓ functor E₂
+T₁ (measurement theory: e.g., what rulers and clocks do)
+ ↓ functor E₁
+T₀ = Set (raw data: numbers the instruments produce)
+```
+
+Each level explains the one below. The functor at each level is a model of the deeper theory in the model category of the shallower theory. Formally: E₃ is a structure-preserving functor C_{T₃} → Mod(T₂, Set), which maps theoretical structure of Hamiltonian mechanics to its interpretation in terms of empirical regularities.
+
+**What this captures:**
+- **Theory-ladenness of observation** is the fact that P is itself a model category of a theory, not a pre-theoretical given.
+- **"All models are wrong but some are useful"** (Rohan's framing) becomes: the functor at each level is not fully faithful — there is theoretical structure that doesn't map cleanly to the level below. The "disconnect" between model and data is the failure of full faithfulness.
+- **Explanatory progress** is adding a new level to the top of the hierarchy: finding a deeper theory whose models include the regularities of the previous level.
+- **Deutsch's criterion** applies at each level: a good explanation at level n is a faithful, essentially surjective, minimal functor from level n to level n-1.
+
+**Lawvere's framework supports this naturally.** The flexibility of the target category — models of a Lawvere theory L can be taken in any category C with appropriate structure, and Mod(L, C) is itself a category with appropriate structure — means the hierarchy composes. Models of groups in topological spaces are topological groups; models of Hamiltonian mechanics in "measurement structures" are measurable predictions.
+
+**Status:** SPECULATIVE. This is a conceptual proposal, not a formal result. Making it precise requires:
+1. Defining what "simpler theory" means (a partial order on theories by logical strength?).
+2. Constructing at least one concrete example of the hierarchy for a real physical theory.
+3. Determining whether "good explanation at each level" composes correctly (is a composition of good explanations itself a good explanation?).
+
 ## 3. What Is Not Yet Done (Critical Gaps)
 
 These are not open questions in the philosophical sense. They are specific technical prerequisites that must be addressed before the framework can be evaluated.
 
-1. **T construction is partially resolved; P is not.** Session 002 identified that the syntactic category construction from categorical logic provides a rigorous, non-ad-hoc way to build T from any first-order theory. **But P remains vague.** What category of "empirical structures" serves as the target? Candidates include Set, Meas (measurable spaces), Top (topological spaces), or Man (smooth manifolds). The choice of P determines what "observable" means and affects what functors E: C_T → P can exist. **This is now the most critical gap.**
+1. **T construction is resolved; P is reframed.** Session 002 identified the syntactic category construction for T (resolved) and proposed that P is the model category of a simpler theory (Section 2.5). **The critical gap is now: can we construct a concrete hierarchy for a real physical theory?** The simplest test case would be classical mechanics with a hierarchy like: Hamiltonian mechanics → Kepler-type empirical laws → measurement operations → Set. If this can be made rigorous, the P question is answered not by picking one P but by recognizing that P is always relative to a measurement/observation theory.
 
 2. **Minimality is partially addressed.** The initiality of the syntactic category C_T provides minimality *within* a theory. But we still lack a way to compare *across* theories — to say that theory T₁ is a better explanation than theory T₂ when both have models in P. This inter-theoretic comparison is what the framework ultimately needs.
 

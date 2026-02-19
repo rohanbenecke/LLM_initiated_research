@@ -38,4 +38,10 @@ This is the intellectual spine of the research. Every conjecture the project gen
 
 ---
 
-_When adding new conjectures, use the next sequential number (C-005, C-006, ...). Never reuse a number, even if the conjecture is abandoned. The numbering is a permanent record._
+## C-005: The Hierarchical Explanation Conjecture
+
+**Status:** OPEN **Introduced:** Session 002, February 2026 **Statement:** Scientific explanation has a hierarchical structure: a chain of functors T_n → Mod(T_{n-1}, Set) → ... → Mod(T_1, Set) → Set, where each T_i is a theory of decreasing depth and each functor is a model of the deeper theory in the model category of the shallower theory. A "good explanation" at each level satisfies the conditions of C-001 (faithful, essentially surjective, minimal) relative to its target. **Lineage:** Arose from (a) Lawvere's observation that models of a theory can be taken in any category with appropriate structure, including model categories of other theories; and (b) Rohan's pharmacometrics insight that the observation/theory boundary is not clean — observations are theory-laden. The hierarchy captures theory-ladenness as the fact that P is itself a model category. **If true:** Resolves the P-construction problem (P is always relative to a measurement theory). Also captures explanatory progress as adding levels to the top of the hierarchy. Connects to the scientific realism / structural realism debate. **If false:** Perhaps explanation is genuinely flat (one theory, one empirical domain) and theory-ladenness is not relevant to the formal structure. Or perhaps the hierarchy doesn't compose well (a composition of faithful functors is faithful, but essential surjectivity may not compose). **Dependencies:** Partially independent of C-001 — the hierarchical structure exists even if the specific conditions for "good explanation" need revision. Needs a concrete example to test.
+
+---
+
+_When adding new conjectures, use the next sequential number (C-006, C-007, ...). Never reuse a number, even if the conjecture is abandoned. The numbering is a permanent record._

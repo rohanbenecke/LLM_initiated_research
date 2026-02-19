@@ -1,89 +1,87 @@
 # Session 002
 
 **Date:** 2026-02-19
-**Focus:** Constructing P and T for classical mechanics; discovering the syntactic category connection
-**Priority queue item:** Rank 1 (Construct category P for classical mechanics) — deviated productively
+**Focus:** Constructing P and T; syntactic category connection; reading Lawvere; hierarchical explanation
+**Priority queue item:** Rank 1 (Construct category P for classical mechanics) — deviated productively twice
 
 ## What I attempted
 
-Started with the stated priority: construct the category P for classical mechanics. The obvious candidate was objects = phase space points, morphisms = Hamiltonian flows. I tested this and found a fundamental problem that led to a more important discovery.
+1. Construct P for classical mechanics (the stated priority).
+2. After the naive P-construction failed, investigated the T-construction and discovered the syntactic category connection.
+3. After Rohan provided sources, read Lawvere's thesis (partial) and Hyland-Power (full).
+4. Processed Rohan's pharmacometrics intuition about theory-ladenness of observation.
+5. Synthesized all of the above into a revised framework.
 
 ## What worked
 
-### The naive construction fails instructively
+### The syntactic category connection (early in session)
+The theoretical category T is the syntactic category C_T from categorical logic. Models are structure-preserving functors. This is Lawvere's 1963 framework — our "explanation as functor" is not new mathematics but an epistemological application of functorial semantics. This resolved the T-construction problem and the functor-direction question.
 
-The candidate P with objects = phase space states and morphisms = Hamiltonian flows does satisfy the category axioms (it's the action groupoid of R acting on phase space). But it conflates the empirical and theoretical: the Hamiltonian flow *is* the theory. If P already encodes the dynamics, the functor E becomes trivially the identity, which tells us nothing about explanatory goodness.
+### The gauge theory test (early in session)
+Informal argument that gauge theories challenge but ultimately support C-001: gauge degrees of freedom are unfaithful theoretical structure that the minimality condition correctly identifies for removal.
 
-**Lesson:** P must be constructible *without* the theory. It represents what you can observe before having an explanation.
+### Reading Lawvere and Hyland-Power (mid-session)
+Confirmed the syntactic category connection. Identified a critical nuance: **Lawvere theories are too narrow for scientific theories.** They handle equational algebra (groups, rings). Scientific theories need the broader categorical logic hierarchy (regular, coherent, geometric theories). This narrows the technical challenge: we need to determine where in this hierarchy scientific theories sit, and use the appropriate doctrine.
 
-### The syntactic category connection
+Key Lawvere quote (p.11): "if we construe theories as categories, models are functors!" — this is exactly our thesis.
 
-This failure led to a productive reframing. The question "what is T?" has a well-known answer in mathematical logic: the **syntactic category** C_T, a standard construction from categorical logic (Lawvere 1963, Makkai & Reyes 1977).
+### The hierarchical picture (late in session, after Rohan's input)
+Rohan's pharmacometrics insight: observations are theory-laden, there's always a loop from data back to theory. This led to the key new idea of the session:
 
-Given a first-order theory T, the syntactic category C_T has formulas-in-context (up to provable equivalence) as objects and provably functional relations as morphisms. A model of T in a category C is a structure-preserving functor C_T → C.
+**P doesn't need to be theory-free. P is the model category of a simpler theory.**
 
-Key property: C_T is the **initial** model — there is a unique functor from C_T to any model. This is a precise form of minimality.
+Explanation is not a single functor T → P but a hierarchy of functors between theories of decreasing depth, each providing a model of the deeper theory in the model category of the shallower theory. This:
+- Resolves the P-construction problem (P is relative to a measurement/observation theory)
+- Captures theory-ladenness formally
+- Models explanatory progress as adding levels to the hierarchy
+- Connects "all models are wrong but some are useful" to partial faithfulness of functors
 
-**This means:** Our "explanation as functor" framework is an instance of Lawvere's functorial semantics. The explanatory functor E: C_T → P is a model of the theory in the empirical category. This is not a coincidence — it's the same structure, discovered independently.
-
-### The functor direction is resolved
-
-T → P is the standard direction of interpretation in functorial semantics. A theory is *about* phenomena; the functor sends theoretical structure to its empirical interpretation. This resolves Priority Queue item Rank 6 from Session 001.
-
-### Informal test: Deutsch's gods example
-
-"The gods willed the seasons" has a non-faithful functor (many theoretical variations map to the same empirical outcome). "Earth's axial tilt" has a faithful functor (each theoretical element maps to a distinct measurable quantity). The faithfulness condition captures Deutsch's criterion informally.
-
-### Gauge theory challenge and resolution
-
-Gauge theories (our best physical explanations) have theoretical structure with no empirical counterpart (gauge degrees of freedom). The functor C_T → P is not faithful for the raw gauge theory. But the minimality condition handles this: gauge degrees of freedom are unnecessary structure that should be quotiented out. The minimal (gauge-invariant) source category does map faithfully. This shows the minimality condition does non-trivial work.
+New conjecture C-005 introduced for this.
 
 ## What didn't work
 
-### P is still not constructed
+### P is still not concretely constructed
+Despite the conceptual reframing (P as model category of simpler theory), no specific hierarchy has been constructed for a real physical theory. The test case (classical mechanics) still needs to be worked through.
 
-The original goal (construct P for classical mechanics) was not achieved. The naive approach failed, and the session pivoted to the T-side of the problem. P remains the critical gap. The question "what category of empirical structures do theories map into?" is now Rank 1 in the priority queue.
-
-### Cross-theory comparison is a new unsolved problem
-
-The syntactic category gives minimality *within* a theory (initiality), but comparing *across* theories (which explanation is better?) requires machinery we don't have yet. This is a gap that wasn't visible before Session 002.
+### Lawvere theories are insufficient
+Scientific theories are not equational. The Lawvere theory formalism is the wrong level of generality. Need Makkai-Reyes-level categorical logic (first-order theories, syntactic categories for regular/coherent theories). This text is not yet available.
 
 ## Key decisions made
 
-1. **Adopted the syntactic category as the canonical construction of T.** This is Definition 1.2v2. The previous informal description (1.2v1) is superseded. This was the right call — it connects us to established mathematics rather than reinventing the wheel.
+1. **Adopted the view that our framework is an epistemological application of functorial semantics**, not new mathematics. This is the right framing — it focuses the novelty on the conditions for "good explanation" (faithful, essentially surjective, minimal) and their epistemological interpretation.
 
-2. **Closed the functor direction question.** T → P is justified by functorial semantics. Removed from priority queue (marked DONE).
+2. **Proposed the hierarchical picture of explanation** (C-005). This is SPECULATIVE but addresses the most stubborn problem (what is P?) in a way that aligns with both the mathematical framework (Lawvere's flexible target categories) and scientific practice (Rohan's pharmacometrics experience).
 
-3. **Added three new reading items** (R-009 Lawvere, R-010 Makkai & Reyes, R-011 Johnstone) to the queue at HIGH/MEDIUM priority. We need to understand what the categorical logic literature already establishes before claiming novelty.
+3. **Added Lawvere thesis reading summary** (R-009) and **Hyland-Power summary** (R-010-partial) to reading/summaries/.
 
-4. **Added cross-theory comparison** as a new open problem (Priority Queue Rank 2).
+4. **Identified the doctrinal hierarchy** as a key technical question: where do scientific theories sit in the Lawvere theories → finite limit theories → regular → coherent → geometric hierarchy?
 
 ## State changes
 
-- **current_state.md:** Added Sections 2.1.1 (syntactic category connection) and 2.1.2 (gauge theory test). Updated critical gaps section — T construction partially resolved, P now the top gap, cross-theory comparison added, functor direction closed.
-- **priority_queue.md:** Major re-ranking. P construction remains Rank 1. Cross-theory comparison added as Rank 2. Gauge theory test case added as Rank 3. Categorical logic reading added as Rank 4. Old Ranks 3 (construct T) and 6 (functor direction) moved to Completed.
-- **definitions.md:** Added Definition 1.2v2 (syntactic category). Marked 1.2v1 as superseded. Updated 1.3v1 (functor direction resolved).
-- **glossary.md:** Added entries for Syntactic Category, Functorial Semantics, Model. Updated T entry. Added gauge equivalence to parking lot.
-- **conceptual_map.md:** Updated graph (T resolved, new nodes for cross-theory comparison and gauge test). Updated Track 1 status.
-- **reading/reading_queue.md:** Added R-009, R-010, R-011.
-- **conjecture_register.md:** No changes (no conjectures changed status, no new conjectures).
-- **dead_ends.md:** No changes (the naive P construction is not a dead end — it's a lesson about what P must be, not evidence that P can't be constructed).
+- **current_state.md:** Added Section 2.5 (Hierarchical Picture of Explanation). Updated gap 1 (P reframed as relative to measurement theory).
+- **conjecture_register.md:** Added C-005 (Hierarchical Explanation Conjecture).
+- **reading/reading_queue.md:** Moved R-009 to partially read (AVAILABLE status). Added R-010p to completed readings.
+- **reading/summaries/R-009.md:** Created.
+- **reading/summaries/R-010-partial.md:** Created.
 
 ## Recommendation for next session
 
-**Focus on Rank 1: Construct P for classical mechanics.**
+**Two parallel tracks:**
 
-The key question the naive approach revealed: P must be constructible *without* the theory. What does a pre-theoretical category of "empirical phenomena" look like?
+**Track A (concrete): Construct a complete hierarchical example for classical mechanics.**
+Take the simplest case (harmonic oscillator) and build:
+- T₁ = measurement theory (what position and time measurements are)
+- T₂ = Hamiltonian mechanics (the deep theory)
+- E: C_{T₂} → Mod(T₁, Set) (the explanatory functor)
+- Check: is E faithful? Essentially surjective? Is T₂ minimal?
 
-Suggested approaches:
-1. **P = Set (or a structured variant).** Models are set-theoretic structures. This is the standard choice in model theory. Simple but potentially too structureless for physics.
-2. **P = Meas.** Category of measurable spaces. Captures the probabilistic/statistical nature of measurement. Physically well-motivated.
-3. **P = a category of "data types."** Objects are types of measurement outcomes (position readings, momentum readings, time stamps). Morphisms are empirical regularities between measurements (correlations, functional dependencies). This is the most faithful to "what we observe" but requires careful construction.
+This is the most important thing to do. Without a concrete example, everything remains speculation.
 
-Approach 3 is the most interesting but hardest. I'd suggest trying Approach 1 first (P = Set) to see if the framework produces anything non-trivial in the simplest case, then upgrading to a richer P if needed.
+**Track B (reading): Obtain and read Makkai & Reyes or equivalent on first-order categorical logic.**
+We need to know the precise syntactic category construction for first-order theories (not just equational theories). This determines the correct formal setting for our work.
 
-Also: if Rohan can provide Lawvere's thesis or a summary of functorial semantics, that would help determine whether our framework adds anything new to the existing literature.
+If Rohan can provide Makkai & Reyes (R-010), prioritize Track B. If not, focus entirely on Track A using the Lawvere theory formalism as an approximation (equational theories are a special case of first-order theories, so results obtained for Lawvere theories should generalize).
 
 ## Honest assessment
 
-This session made real progress. The syntactic category connection is a genuine insight — it transforms the project from "invent new formalism" to "apply and extend existing formalism to epistemology." Two open questions were closed (T construction, functor direction). The gauge theory test provides non-trivial informal evidence that the framework classifies correctly. The main goal (construct P) was not achieved, but the failure was instructive.
+This was a productive session with two genuine conceptual advances: (1) the identification with functorial semantics, and (2) the hierarchical picture of explanation. Neither is formalized, but both redirect the research in productive ways — grounding the framework in established mathematics and resolving the P-construction problem conceptually. The main weakness is that we still have zero concrete examples. The next session must produce at least one.

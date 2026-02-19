@@ -16,7 +16,7 @@ Priority: HIGH / MEDIUM / LOW Status: AVAILABLE (in reading/sources/) or NEEDED 
 |R-006|Wigner — "The Unreasonable Effectiveness of Mathematics in the Natural Sciences"|Full paper|HIGH|NEEDED|Primary source for the puzzle we're trying to resolve. Short paper.|
 |R-007|Baez & Dolan — "From Finite Sets to Feynman Diagrams"|Full paper|MEDIUM|NEEDED|Example of category-theoretic structure appearing across physics. Relevant to C-002.|
 |R-008|Li & Vitányi — _An Introduction to Kolmogorov Complexity_|Ch. 1–2|LOW|NEEDED|Relevant to C-003 (minimality-complexity conjecture). Not urgent.|
-|R-009|Lawvere — _Functorial Semantics of Algebraic Theories_ (thesis, 1963)|Full text or summary|HIGH|NEEDED|Session 002 identified functorial semantics as the existing framework closest to ours. Need to understand what Lawvere already established and where our contribution starts.|
+|R-009|Lawvere — _Functorial Semantics of Algebraic Theories_ (thesis, 1963)|Author's comments + Ch. II overview (partial read)|HIGH|AVAILABLE|Session 002 identified functorial semantics as the existing framework closest to ours. Partial read completed — need to finish formal details in Ch. II-III.|
 |R-010|Makkai & Reyes — _First Order Categorical Logic_|Ch. 1–3 (Syntactic categories, models, completeness)|HIGH|NEEDED|The syntactic category construction is central to our framework. Need the precise definitions and theorems.|
 |R-011|Johnstone — _Sketches of an Elephant_ (Vol. 1)|Part D (Categorical logic sections)|MEDIUM|NEEDED|Comprehensive modern treatment of categorical logic. Reference for syntactic categories and their properties.|
 
@@ -24,7 +24,8 @@ Priority: HIGH / MEDIUM / LOW Status: AVAILABLE (in reading/sources/) or NEEDED 
 
 |#|Text|Session Read|Summary Location|Key Takeaway|
 |---|---|---|---|---|
-|—|_None yet_|—|—|—|
+|R-009|Lawvere — _Functorial Semantics of Algebraic Theories_|Session 002 (partial)|reading/summaries/R-009.md|Our framework is an instance of functorial semantics. Lawvere theories too narrow for scientific theories — need broader categorical logic.|
+|R-010p|Hyland & Power — _Lawvere Theories and Monads_|Session 002 (full)|reading/summaries/R-010-partial.md|Historical context. Confirmed framework is standard. Identified doctrinal hierarchy as key: equational → regular → coherent → geometric.|
 
 ## Notes
 
